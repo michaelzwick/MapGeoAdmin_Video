@@ -78,8 +78,7 @@ DRIVER = r'C:\temp\chromedriver.exe'
 driver = webdriver.Chrome(DRIVER)
 driver.set_window_size(1920, 1200)
 
-# Generate and save image for every camera position 
-str(points[i][0])
+# Generate and save image for every camera position
 for i in range (0,len(headings)):
     mainurl = baseurl + '&lon=' + str(points[i][0]) + '&lat=' + str(points[i][1]) + '&elevation=' + str(elev) + '&heading=' + str(headings[i]-180) + '&pitch=' + str(pitch)
     driver.get(mainurl)
