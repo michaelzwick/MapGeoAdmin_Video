@@ -25,22 +25,22 @@ pip install moviepy
 - CreateVideo
 
 ### [CreateCameras_Circle.py](CreateCameras_Circle.py)
+![Image Circle](Mode_Circle.png "Circle")
 - Using center coordinate and radius
 - Calculating camera positions in WGS84, elevations, headings and pitches
 - Save calculations in a dump file
-![Image Circle](https://raw.githubusercontent.com/michaelzwick/MapGeoAdmin_Video/master/Mode_Circle.png "Circle")
 
 ### [CreateCameras_Path.py](CreateCameras_Path.py)
+![Image Path](Mode_Path.png "Path")
 - Using path in list format or KML file
 - Calculating camera positions in WGS84, elevations, headings and pitches
 - Save calculations in a dump file
-![Image Path](https://raw.githubusercontent.com/michaelzwick/MapGeoAdmin_Video/master/Mode_Path.png "Path")
 
 ### [CreateCameras_Round.py](CreateCameras_Round.py)
+![Image Round](Mode_Round.png "Round")
 - Using center coordinate
 - Calculating camera positions in WGS84, elevations, headings and pitches
 - Save calculations in a dump file
-![Image Round](https://raw.githubusercontent.com/michaelzwick/MapGeoAdmin_Video/master/Mode_Round.png "Round")
 
 ### [CreateScreenshots.py](CreateScreenshots.py)
 - Defining base URL from www.map.geo.admin.ch
@@ -101,9 +101,9 @@ DRIVER = r'C:\temp\chromedriver.exe'
 ```
 
 ## Video
-[Video_Saentis.mp4](Video_Saentis.mp4)
-[Video_Luzern.mp4](Video_Luzern.mp4)
-[Video_Gurten.mp4](Video_Gurten.mp4)
+*[Video_Saentis.mp4](Video_Saentis.mp4)
+*[Video_Luzern.mp4](Video_Luzern.mp4)
+*[Video_Gurten.mp4](Video_Gurten.mp4)
 Open with [VLC](https://www.videolan.org) player
 
 ## Author
