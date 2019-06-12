@@ -1,5 +1,5 @@
 #=============================================================================#
-# Create Cameras Round                                             23.02.2019 #
+# Create Cameras Round                                             24.05.2019 #
 #-----------------------------------------------------------------------------#
 #                                                                             #
 # Michael Zwick | Topografischer Fachspezialist | VBS / swisstopo             #
@@ -8,6 +8,7 @@
 
 import os
 import math
+import time
 import pickle
 import datetime
 import requests
@@ -19,11 +20,10 @@ print(timestamp + ' |START| Create Cameras Round')
 
 
 # Script parameters
-center = [2599874, 1196511] # Gurten
-elevation = 900
-pitch = 0
-steps = 720
-root = r'C:\temp'
+center = [2600000, 1200000] # Bern
+elevation = 700
+pitch = -20
+steps = 4
 
 
 
@@ -77,9 +77,6 @@ pickle.dump(elevations, file)
 pickle.dump(pitches, file)
 pickle.dump(mode, file)
 file.close()
-
-timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-print(timestamp + ' |INFO | Saveing data done')
 
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 print(timestamp + ' |END  | Create Cameras Round')

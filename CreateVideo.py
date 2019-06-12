@@ -1,5 +1,5 @@
 #=============================================================================#
-# Create Video                                                     23.02.2019 #
+# Create Video                                                     24.05.2019 #
 #-----------------------------------------------------------------------------#
 #                                                                             #
 # Michael Zwick | Topografischer Fachspezialist | VBS / swisstopo             #
@@ -11,22 +11,20 @@ import pickle
 import datetime
 from moviepy.editor import *
 
-time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-print(time + ' |START| Create Video')
+timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+print(timestamp + ' |START| Create Video')
 
 
 
 
 # Script parameters
-root = r'C:\temp'
-folder = 'Images'
-directory = os.path.join(root, folder)
+fps = 24
 
 
 
 
 # Sort images
-files = os.listdir(directory)
+files = os.listdir('Images')
 files = [int(x[:-4]) for x in files]
 files = sorted(files, key=int)
 files = [str(x)+'.png' for x in files]
@@ -52,12 +50,9 @@ print(timestamp + ' |INFO | Loading data done')
 # Create list of images and collect to video
 images = []
 for file in files:
-    images.append(os.path.join(directory, file))
-clip = ImageSequenceClip(images, fps=24)
+    images.append('Images/' + file)
+clip = ImageSequenceClip(images, fps=fps)
 clip.write_videofile('Video_' + mode + '.mp4') # open with VLC player
 
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-print(timestamp + ' |INFO | Video creating done')
-
-time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-print(time + ' |END  | Create Video')
+print(timestamp + ' |END  | Create Video')
